@@ -4,7 +4,7 @@
 
 public class Gato extends SerVivo implements Animal {
 
-    // ── ATRIBUTOS (todos private = encapsulamiento) ──────────
+    // ── ATRIBUTOS (todos private = encapsulamiento) 
     // Nadie los puede tocar directo desde afuera.
     // Solo se leen/cambian con getters y setters.
     private int vidas;
@@ -13,11 +13,14 @@ public class Gato extends SerVivo implements Animal {
     // ── CONSTRUCTOR VACÍO 
     // Se usa cuando no tienes datos aún: new Gato()
     // super() llama al constructor del PADRE (SerVivo)
-    public Gato() {
-        super("Superman");            // le pasa "Superman" a SerVivo
-        this.vidas  = 9;
-        this.color  = "Desconocido";
-    }
+    
+                    /*  public Gato() {
+                            super("Superman");            // le pasa "Superman" a SerVivo
+                            this.vidas  = 9;
+                            this.color  = "Desconocido";
+                        }
+                            */
+
 
     // ── CONSTRUCTOR CON PARÁMETROS 
     // Se usa cuando ya tienes los datos: new Gato("Luna", "Gris", 9)
@@ -29,34 +32,30 @@ public class Gato extends SerVivo implements Animal {
         this.vidas  = vidas;
     }
 
-    // ── GETTERS — leer atributos privados ─────────────────────
-    public String getNombre()      { return name; }
-    public int getVidas()          { return vidas;  }
-    public String getColor()       { return color;  }
-
+    
+// ── GETTERS — leer atributos privados 
+    @Override
+    public String getNombre()      { 
+        return name; }
    
+    public int getVidas()          { 
+    return vidas;  }
 
-    // ── MÉTODO CON PARÁMETROS ─────────────────────────────────
+    public String getColor()       { 
+    return color;  }
+
+
+
+    // ── MÉTODO CON PARÁMETROS 
     // "veces" y "tono" solo existen dentro de este método
     public void maullar(int veces, String tono) {
         for (int i = 0; i < veces; i++) {
             System.out.println(name + ": " + tono);
         }
     }
+  
 
-    // Pierde una vida con lógica de if/else
-    public void perderVida() {
-        if (vidas > 0) {
-            vidas--;
-            System.out.println(name + " perdió una vida. Le quedan: " + vidas);
-        } else {
-            System.out.println(name + " no tiene más vidas 😿");
-        }
-    }
-
-   
-
-    // ── @Override — REEMPLAZA hablar() del padre SerVivo ─────
+    // ── @Override — REEMPLAZA hablar() del padre SerVivo 
     // Sin @Override, Java no sabría que estás reemplazando.
     // Con @Override, si escribes mal el nombre Java te avisa.
     @Override
@@ -69,5 +68,4 @@ public class Gato extends SerVivo implements Animal {
         System.out.println(name + "... Zzz");
     }
 
-    // ── @Override — OBLIGATORIO por implementar Animal ────────  
 }
