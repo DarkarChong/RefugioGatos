@@ -14,12 +14,12 @@ public class GatoSiames extends Gato {
         this.patrones = patrones;
     }
 
-    // ── @Override — reemplaza el hablar() de Gato 
+    // ─ @Override  reemplaza el hablar() de Gato 
     // La cadena es: GatoSiames.hablar() reemplaza Gato.hablar()
     // que ya reemplazó SerVivo.hablar()
     @Override
     public void hablar() {
-        System.out.println(getNombre() + ": ¡MIAU SIAMÉS! (muy vocal 😼)");
+        System.out.println(getNombre() + ": ¡MIAU SIAMÉS!");
     }
 
     // Método propio — solo lo tiene GatoSiames

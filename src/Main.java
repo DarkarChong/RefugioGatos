@@ -23,7 +23,7 @@ public class Main {
 
         System.out.println(" MÉTODOS CON PARÁMETROS");
         // maullar(veces, tono) → dos parámetros
-        luna.maullar(3, "MIAU FUERTE 😾");
+        luna.maullar(3, "MIAU FUERTE ");
         sol.maullar(1, "miau suavecito...");
 
         
