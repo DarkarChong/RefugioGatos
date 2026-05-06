@@ -13,7 +13,7 @@ public class GatoSiames extends Gato {
         super(nombre, "Crema y café", 9);  // llama al constructor de Gato
         this.patrones = patrones;
     }
-
+//guwduahbsudhab
     // ─ @Override  reemplaza el hablar() de Gato 
     // La cadena es: GatoSiames.hablar() reemplaza Gato.hablar()
     // que ya reemplazó SerVivo.hablar()
